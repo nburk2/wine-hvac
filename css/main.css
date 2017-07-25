@@ -1,0 +1,185 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800);*/
+
+/*header {
+  margin-top: 130px;
+}*/
+
+#sticky-nav {
+  display: none;
+  position: relative;
+  z-index: 10;
+}
+
+header nav li {
+  font-size: 25px;
+}
+
+/*header nav li.active {
+  background-color:lightgrey;
+  border-radius:10px;
+}*/
+
+header nav li:hover {
+  background-color:lightgrey;
+  border-radius:10px;
+}
+
+header nav a .main-logo {
+  width: 200px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /*remove navbar gap so it doesn't close*/
+ }
+
+/*non sticy menudropdown*/
+ section nav .dropdown-menu a:hover {
+     background-color: green;
+  }
+
+section nav li:hover {
+    background-color: green;
+ }
+
+.top-section {
+  background-image: url(../images/mainbg.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  /*background-attachment:fixed;*/
+  position: relative;
+}
+
+/*
+  INDEX.html
+*/
+.carousel {
+  max-height: 442px;
+  max-width: 100%;
+}
+
+.carousel-item {
+  align-items: center;
+  max-height: inherit;
+}
+
+.carousel .carousel-caption {
+  height: inherit;
+  top: 50%;
+  align-items: center;
+}
+
+.carousel .carousel-inner {
+  max-height:inherit;
+}
+
+.carousel img {
+  width:100%;
+  height:100%;
+}
+
+a.card-block {
+  color: black;
+}
+
+a {
+ -webkit-transition: .25s all;
+ transition: .25s all;
+}
+
+.card {
+ overflow: hidden;
+ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ -webkit-transition: .25s box-shadow;
+ transition: .25s box-shadow;
+}
+.card:focus, .card:hover {
+ box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.card-inverse .card-img-overlay {
+ background-color: rgba(51, 51, 51, 0.85);
+ border-color: rgba(51, 51, 51, 0.85);
+}
+
+.card img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.partners ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.partners ul li{
+  display: inline-block;
+  float: left;
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  .partners ul li{
+    padding-top:0px !important;
+  }
+
+  .iframe-video {
+    height: 376px;
+  }
+}
+
+/*
+Our Business
+*/
+container.business-header {
+  background:url(../images/truck23.jpg);
+  height:500px;
+  background-position: center;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-attachment:fixed;*/
+  position: relative;
+}
+section.business-header {
+  background:url(../images/truck23.jpg);
+  height:500px;
+  background-position: center;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-attachment:fixed;*/
+  position: relative;
+}
+
+blockquote {
+border: 1px solid #b3b3b3;
+border-left: 10px solid green;
+border-radius: 0px;
+background: #fafafa;
+font-size: 18px;
+margin: 10px;
+padding: 10px 20px;
+}
+
+blockquote p {
+margin: 0;
+line-height: 30px;
+padding-bottom: 20px;
+}
+
+blockquote .small {
+display: block;
+font-size: 80%;
+color: brown;
+text-align: right;
+}
