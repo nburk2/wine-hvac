@@ -90,7 +90,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-sm-4" style="padding-top:20px;">
+          <div class="col-sm-4 text-center" style="padding-top:20px;">
             <img src="images/logo.png" style="width:300px;" class="main-logo wow fadeInRightBig" data-wow-duration="2000ms">
           </div>
           <div class="push-sm-2 col-sm-3">
@@ -102,7 +102,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-4" style="padding-top:40px;">
+          <div class="col-sm-4 hidden-sm-down" style="padding-top:40px;">
             <img src="images/logo2.png" style="width:120px;" class="main-logo wow bounceIn pull-right" data-wow-duration="2000ms">
           </div>
         </div>
@@ -202,8 +202,20 @@
       </div>
 
       <div class="" style="padding:20px">
-        <img src="images/big_logo.png" class="text-center img-circle" style="display: block;margin: 0 auto;border-radius:50%;">
+        <div class="info-card">
+  				<div class="front">
+            <img src="images/big_logo.png" class=" card-image text-center img-circle" style="margin: 0 auto !important;">
+  					<!-- <img class="card-image" src="http://i.imgur.com/QHxnyes.jpg?1"> -->
+  				</div>
+  			<div class="back text-center">
+  				<h3 class="flip-text">Wine Energy HeadQuarters</h3>
+          <hr style="border-color:white;">
+          <h4><a class="text-white" href="https://www.wineenergyva.com">Learn More Here</a></h4>
+  			</div>
+  		</div>
+        <!-- <img src="images/big_logo.png" class="text-center img-circle" style="display: block;margin: 0 auto;border-radius:50%;"> -->
       </div>
+
       <div class="container">
         <iframe class="iframe-video" width="100%" allowfullscreen="" frameborder="0" height="550" src="https://www.youtube.com/embed/J9U7pcdPtH0?feature=oembed&amp;enablejsapi=1"></iframe>
       </div>
@@ -276,7 +288,7 @@
                 <h6>" + data[0].condition + "</h6> \
                 <h2><img src='" + data[0].icon + "'> " + data[0].temp + "°F</h2> \
                 <div class='row'> \
-                  <div class='col-md-6'> \
+                  <div class='col-md-6 hidden-sm-down'> \
                       <p> \
                           " + data[1].hour + " \
                       </p> \
@@ -285,7 +297,7 @@
                           " + data[1].temp + "°F \
                       </p> \
                   </div> \
-                  <div class='col-md-6'> \
+                  <div class='col-md-6 hidden-sm-down'> \
                       <p> \
                           " + data[2].hour + " \
                       </p> \
