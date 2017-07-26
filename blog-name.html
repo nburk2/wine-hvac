@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | Wine Energy</title>
+
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo2.png">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101971487-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+</head><!--/head-->
+
+<body class="homepage">
+
+    <header id="sticky-nav">
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-light sticky-navbar" style="background-color: white;border-bottom: 1px solid #222; padding: 0;">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" class="main-logo" data-wow-duration="2000ms">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="who-we-are.html">Who We Are</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-center" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="hvac-installation.html"><i class="fa fa-wrench"> HVAC Installation</i></a>
+                  <a class="dropdown-item" href="hvac-maintenance.html"><i class="fa fa-wrench"> HVAC Maintenance</i></a>
+                  <a class="dropdown-item" href="hvac-repair.html"><i class="fa fa-wrench"> HVAC Repair</i></a>
+                  <a class="dropdown-item" href="http://www.crystalcleanductservice.com"><i class="fa fa-chevron-right"> Duct Cleaning</i></a>
+                  <a class="dropdown-item" href="generators.html"><i class="fa fa-home"> Genorators</i></a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-center" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Service Plans
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="https://s3.amazonaws.com/wine-energy/documents/hvac-plans.pdf"><i class="fa fa-check-square-o"> Plans</i></a>
+                  <a class="dropdown-item" href="https://s3.amazonaws.com/wine-energy/documents/hvac-pricing.pdf"><i class="fa fa-money"> Pricing</i></a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="https://www.wineenergyva.com/paybill.html">Online Bill Pay</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- <a class="btn hidden-md-down" href="https://wineenergy.fuelall.com/login.asp"><span><i class="fa fa-truck fa-3x"></i></span> <br><p style="font-size:10px"> Fleet Fuel Portal</p></a> -->
+          <!-- <a class="btn hidden-md-down" href="https://accounts.wineenergyva.com/OCI/login.aspx"><span><i class="fa fa-globe fa-3x"></i></span> <br><p style="font-size:10px"> Online Account Access</p></a> -->
+          <!-- <a class="btn hidden-md-down" href="paybill.html"><span><i class="fa fa-gear fa-3x"></i></span> <br><p style="font-size:10px"> Pay your bill online</p></a> -->
+        </nav>
+
+    </header><!--/header-->
+
+    <section id="main-slider" class="no-margin top-section">
+      <div class="bg-primary">
+        <h3 class="text-fade text-center">Residential and Commercial Heating and Air Conditioning Sales, Installation, Repairs, and Maintenance</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 text-center" style="padding-top:20px;">
+            <img src="images/logo.png" style="width:300px;" class="main-logo wow fadeInRightBig" data-wow-duration="2000ms">
+          </div>
+          <div class="push-sm-2 col-sm-3">
+            <div class="card bg-fade mb-2" style="border: 1px solid rgba(0, 0, 0, .125);border-color: #0275d8">
+              <div class="card-block">
+                <div id="weather" style="text-align: center">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 hidden-sm-down" style="padding-top:40px;">
+            <img src="images/logo2.png" style="width:120px;" class="main-logo wow bounceIn pull-right" data-wow-duration="2000ms">
+          </div>
+        </div>
+      </div>
+      <div class="container bg-primary">
+        <nav class="navbar navbar-toggleable-xl navbar-light" style="border-bottom: 1px solid #222; padding: 0;display:block !important">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center text-white" href="who-we-are.html">Who We Are</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Services
+                </a>
+                <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdownMenuLink" style="position:absolute;">
+                  <a class="dropdown-item text-white" href="hvac-installation.html"><i class="fa fa-wrench"> HVAC Installation</i></a>
+                  <a class="dropdown-item text-white" href="hvac-maintenance.html"><i class="fa fa-wrench"> HVAC Maintenance</i></a>
+                  <a class="dropdown-item text-white" href="hvac-repair.html"><i class="fa fa-wrench"> HVAC Repair</i></a>
+                  <a class="dropdown-item text-white" href="http://www.crystalcleanductservice.com"><i class="fa fa-chevron-right"> Duct Cleaning</i></a>
+                  <a class="dropdown-item text-white" href="generators.html"><i class="fa fa-home"> Genorators</i></a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Service Plans
+                </a>
+                <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdownMenuLink" style="position:absolute;">
+                  <a class="dropdown-item text-white" href="https://s3.amazonaws.com/wine-energy/documents/hvac-plans.pdf"><i class="fa fa-check-square-o"> Plans</i></a>
+                  <a class="dropdown-item text-white" href="https://s3.amazonaws.com/wine-energy/documents/hvac-pricing.pdf"><i class="fa fa-money"> Pricing</i></a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="https://www.wineenergyva.com/paybill.html">Online Bill Pay</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+            <a class="nav-link text-white" href="tel:7033686568"><i class="fa fa-phone"> 703-368-6568</i></a>
+          </div>
+        </nav>
+      </div>
+      <br>
+      <div class="container" >
+        <div class="row">
+          <div class="col-9">
+            <div id="summer_is_coming" style="display:none;">
+              <h3 class="text-primary">Summer is coming….</h3>
+              <p>
+                In the Spirit of a new season of Game of Thrones and the seasons changing, this is as good time as any to share a quick reminder about air conditioning in your home.
+              </p>
+              <p>
+                In Woodbridge, VA, Brett, a customer questioning for why his air conditioning was not flowing properly called Wine Energy in a panic. He was concerned because he felt the heat even though the air conditioning was turned on. He called Wine Energy to ask a couple of questions and to tell us about what he thinks is the problem. His issues were similar to what Wine Energy has seen in previous customers, but his situation was different. When we mentioned we had an idea of what it could be, he booked an appointment for an air conditioning repair. Once we were able to get to the apartment and evaluate all the symptoms, we found that the air conditioning vent had frozen up. You would think that means it is extra cold, right? Brett thought that when we told him. It actually means that there is no air flowing through the system and it needs to be cleaned properly.   Most of the time you only flip the switch or turn the nozzle to turn on the air conditioning and you don’t think too much about what happens behind the vent. Brett was very thankful Wine Energy got there in time. Though winter is NOT coming, summer is, and now is the time to check your units before you feel like your home is as hot as a dragon’s lair.
+              </p>
+              <p>
+                Don’t live as if you were living with dragons this upcoming season, check your units today!
+              </p>
+              <br>
+              <p>
+                <strong>Call Wine Energy for your FREE estimate today!</strong>
+              </p>
+              <br>
+              <p>
+                <strong>1-703-368-6568</strong>
+              </p>
+              <br>
+              <p>
+                <strong>Manassas, VA</strong>
+              </p>
+            </div>
+
+            <div id="home_alone" style="display:none;">
+              <h3 class="text-primary">Home Alone: HVAC Edition</h3>
+              <p>
+                In Fairfax, VA was a home residence that was replicating a horror scene. Have you ever seen the movie Home Alone? For those of you who haven’t, Kevin McAlister is left behind while his parents take the family on vacation. Kevin is about 11 years old and while the family is away, there are two bandits who go door to door in robbing houses. Kevin is able to maintain the house and get the bandits busted thanks to some help from a couple of neighbors. Anyways, while Kevin is maintaining this house, he teaches himself to do laundry. His washer and dryer are in the basement near the furnace. The furnace is haunted in Kevin’s mind and comes to life when he sees it. You’ve had that right? The feeling when you think something coming to life, or following you in your basement when you’re alone?
+              </p>
+              <p>
+                Well, Stacy called Wine Energy because she had that happen to her with her HVAC unit. As she explained the story, she used Home Alone as a reference. “Instead of the unit saying ‘Hello Kevin’, it was saying ‘Hello Stacy!’ so I got scared,” said Stacy when explaining her story. When she swore she heard the unit say ‘Hello Stacy”, that was the unit breaking down. It might have been the heat going to her head, but that’s because the HVAC Unit was broken and needed to be replaced. Don’t be like Stacy and see haunting HVAC units breaking down thinking they are coming to life.
+              </p>
+              <p>
+                Stacy heard weird noises from her HVAC unit.
+              </p>
+              <p>
+                Stacy saw weird images from her HVAC unit.
+              </p>
+              <p>
+                Stacy waited until her HVAC unit broke down to realize it wasn’t coming to life.
+              </p>
+              <p>
+                Stacy was scared.
+              </p>
+              <p>
+                Don’t be like Stacy.
+              </p>
+              <p>
+                As the heat kicks it into gear, make sure your HVAC unit does as well. Let Wine Energy help you today so you don’t end up like Stacy.
+              </p>
+              <br>
+              <p>
+                <strong>Call Wine Energy for your FREE estimate today!</strong>
+              </p>
+              <br>
+              <p>
+                <strong>1-703-368-6568</strong>
+              </p>
+              <br>
+              <p>
+                <strong>Manassas, VA</strong>
+              </p>
+            </div>
+
+            <div id="how_to_keep_cool" style="display:none;">
+              <h3 class="text-primary">How to Keep Cool Without Air Conditioning</h3>
+              <p>
+                Manassas, Virginia can be pretty hot in the summer, and let’s face it – air conditioning is the 8th wonder of the world. It’s changed our lives for the better, and we wouldn’t give it up for anything. However, there are other ways to battle the heat that are pretty darn effective. Whether you’re waiting on a new air conditioner, need A/C repair or you’re just embracing a new way of life, here is a list of ways to keep cool that you may not have known about.
+              </p>
+              <p>
+                <Strong>Keep your blinds closed.</strong> A lot of unwanted heat comes from your windows. Since you don’t want a greenhouse situation on your hands, close your blinds, shades and curtains to save on bills and significantly lower temperatures.
+              </p>
+              <p>
+                <strong>Doors are key.</strong> During the day when the temperatures hit a peak, close doors to rooms you’re not using. This prevents hot air from circulating through the house and contains the cooler air you’ve generated in a smaller area.
+              </p>
+              <p>
+                <strong>Cool the sheets.</strong> We know this sounds strange, but dampening your sheets with a few spritzes from a water bottle will help you stay much cooler at night. You could also invest in a bed-friendly Chillow cooling pad to put under your head or feet. Lastly, make sure your sheets are cotton and not satin, flannel or polyester – your skin will breathe easier and sweat less.
+              </p>
+              <p>
+                <strong>Turn on your bathroom and kitchen fans.</strong> People sometimes forget that these fans actually pull from the hot air that rises after you’ve cooked or taken a shower out of your house.
+              </p>
+              <p>
+                <strong>Grill instead.</strong> You know how you hover over the blast of hot hair coming out of your oven door on cold winter nights? That’s because cooking inside makes your house warmer. In the summer, keep the extra 400 degrees where it belongs – outside. Plus, the taste of grilled food is the essence of summer.
+              </p>
+              <p>
+                <strong>Soak in the night air.</strong> If you notice that the temperature has dropped considerably by nightfall, take advantage and open your windows before bed. Tip: position fans so they are able to blow hot air out of your windows and draw cool air in. Don’t forget to close your windows back up before bed to block out the morning heat.
+              </p>
+              <p>
+                If your air conditioning breaks this month, worry not – you can use these tips to stay cool until we come to the rescue.
+              </p>
+            </div>
+
+            <div id="how_to_maintain" style="display:none;">
+              <h3 class="text-primary">How to Maintain Your Air Conditioner</h3>
+              <p>
+                Performing proper maintenance and repair on your air conditioning (A/C) unit is the best way to ensure many years of good service. Now that summer is in full swing, you may experience trouble with your A/C unit if it hasn’t been properly maintained or undergone an annual inspection.
+              </p>
+              <p>
+                To help you stay cool during the heat, here are three things you can do to keep your A/C running smoothly this summer.
+              </p>
+              <ol>
+                <li>
+                  <Strong>Clean or replace your air filters.</strong> The air filters inside your home could be compared to what your nose does for your respiratory system. When the air filters “inhale” and capture dust, dirt and other contaminants, they need to be cleaned out before those items are sucked in and cause problems inside your unit. Changing filters as stated on the packaging of your particular filter brand is ideal; if you experience troublesome allergies, you may want to swap out filters more frequently. Clean filters can lower your heating and air conditioning system’s energy consumption between 5% and 15%.
+                </li>
+                <li>
+                  <strong>Clean the condenser.</strong> (Important safety tip: remember to turn off the power to ALL parts of your A/C unit before self-servicing!) The condenser is the part of your A/C unit located outside. Throughout the year, be sure to control weed, grass and leaf buildup around the unit. Once a year, clean the intake coils with a commercial cleaner, always being sure to follow directions. You will also want to gently brush dirt from the outside fins, being careful to not bend or break the delicate aluminum. Finally, do a visual check of the concrete pad to see if there is any cracking or settling and use a carpenter’s level to make sure the concrete is still level. Not comfortable doing this yourself? Give Wine Energy Heating and Air Conditioning a call at (571) 364-6587.
+                </li>
+                <li>
+                  <strong>Hire the professionals.</strong> Though doing what you can to clean and replace the accessible parts of your A/C unit is crucial for a well-running system, it’s also important to know your limitations. Allowing a professional technician to replace and repair the portions of your system that are inaccessible will reduce the risk of mistakenly damaging or unnecessarily replacing any part of your unit.
+                </li>
+              </ol>
+              <p>
+                As we all know, no matter how well appliances are cared for, sometimes they just break. And that’s why you have us! Don’t forget that Wine Energy Heating and Air Conditioning services are available 24/7 to help with any repair or service, and we provide sell and finance new energy-efficient HVAC units.
+              </p>
+              <p>
+                For a limited time this summer, hotter temperatures bring you cooler deals! Convert degrees to dollars and save that amount on any AC unit or service of $499 or more. Click here for more details or call  to schedule a service.
+              </p>
+            </div>
+
+            <div id="do_you_fear" style="display:none;">
+              <h3 class="text-primary">Do You Fear Your Air Conditioning Bills?</h3>
+              <p>
+                As the summer heat rolls in, you may be starting to panic about your upcoming air conditioning bills. The EPA reports that heating and cooling use up as much as half of the energy in your home, so it makes sense that you pay attention to the bottom line impact of air conditioning. After all, you’re just trying to make your home environment comfortable, but every time the unit kicks on, you’re envisioning those utility dollars increasing.
+              </p>
+              <p>
+                There are a few steps that you can take to make a difference without the help of a professional. With central air conditioning, you can start by making sure that you change your air filters once a month. Buy air conditioning filters in bulk to save money, add your monthly filter change to your calendar, and make it happen! Changing your filter really does make a difference. When dirt builds up on the filter, your system has to work extra hard to move the air through. A harder working air conditioning system translates to more energy used and higher utility bills. A nice clean filter allows your air conditioner to work efficiently, saving you money.
+              </p>
+              <p>
+                Taking the time to properly program your thermostat is another step that can save you cooling dollars. Most of today’s programmable thermostats allow for multiple settings per day with easy override options, so setting the thermostat to warm the house during periods of time when you are typically away from home should be a relatively simple solution with minimal problems. Some people avoid modifying thermostat settings while they are away for fear that it costs more to return the home to the desired climate after setting the thermostat back, but the US Department of Energy reports that this is a misconception. During the summer, if you keep your house warmer while you are away, there is a slower flow of heat into your home, resulting in air conditioning savings.
+              </p>
+              <p>
+                So, if you’re really worried about those A/C costs, take these first do-it-yourself steps, and rest assured that you’ve done your part. If you are due for some system maintenance or an urgent repair, the certified professionals at Wine Energy Heating and Air Conditioning can respond within 24 hours. Wine Energy Heating and Air Conditioning also offers new or replacement units, more energy efficient and financed for affordability, Take advantage of the WINEHOTDEAL offer during the summer of 2015. The hotter it gets, the cooler your savings.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <h4 class="text-center">
+              <strong>Recent Posts</strong>
+            </h4>
+            <ul>
+              <hr>
+              <li>
+                <a href="blog-name.html?name=summer_is_coming">Summer is coming...</a>
+              </li>
+              <hr>
+              <li>
+                <a href="blog-name.html?name=home_alone">Home Alone: HVAC Edition</a>
+              </li>
+              <hr>
+              <li>
+                <a href="blog-name.html?name=how_to_keep_cool">How to Keep Cool Without Air Conditioning</a>
+              </li>
+              <hr>
+              <li>
+                <a href="blog-name.html?name=how_to_maintain">How to Maintain Your Air Conditioner.</a>
+              </li>
+              <hr>
+              <li>
+                <a href="blog-name.html?name=do_you_fear">Do You Fear Your Air Conditioning Bills?</a>
+              </li>
+              <hr>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+    </section>
+
+    <nav class="navbar navbar-inverse bottom navbar-toggleable-xl bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">
+        <img src="images/logo.png" width="150px">
+      </a> -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">© 2016 Wine Energy, Inc. All rights reserved.</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hidden-md-up text-white" href="index.html">
+              9108 Centreville Road, Manassas, VA 20110
+              (571) 364-6587
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="navbar-brand hidden-sm-down" href="#">
+        9108 Centreville Road, Manassas, VA 20110
+        (571) 364-6587
+      </a>
+    </nav>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+              }
+          }
+      };
+      var currentBlog = getUrlParameter('name');
+      $("#"+currentBlog).show()
+        // get Weather
+        $.ajax({
+          type: 'GET',
+          url: 'https://ibkxdho8ce.execute-api.us-east-1.amazonaws.com/prod/getWeather?state=VA&city=Manassas',
+          dataType: 'json',
+          contentType: 'application/json',
+        success: function (data) {
+          if(data.error != null) {
+            $('#weather').html("<h4 class='card-title'>Weather...</h4>")
+          } else {
+            data = data.weather
+            $('#weather').html("<h4 class='card-title'>Manassas</h4> \
+                </h4> \
+                <h6>" + data[0].condition + "</h6> \
+                <h2><img src='" + data[0].icon + "'> " + data[0].temp + "°F</h2> \
+                <div class='row'> \
+                  <div class='col-md-6 hidden-sm-down'> \
+                      <p> \
+                          " + data[1].hour + " \
+                      </p> \
+                      <img src='" + data[1].icon + "'> \
+                      <p> \
+                          " + data[1].temp + "°F \
+                      </p> \
+                  </div> \
+                  <div class='col-md-6 hidden-sm-down'> \
+                      <p> \
+                          " + data[2].hour + " \
+                      </p> \
+                          <img src='" + data[2].icon + "'> \
+                      <p> \
+                          " + data[2].temp + "°F \
+                      </p> \
+                  </div> \
+                 </div>");
+          }
+        },
+        error: function (data) {
+          $('#weather').html("<h4 class='card-title'>weather...</h4>")
+        }
+        });
+
+        $(window).bind("scroll", function() {
+            if ($(this).scrollTop() > 350) {
+                $("#sticky-nav").fadeIn("slow");
+            } else {
+                $("#sticky-nav").stop().fadeOut();
+            }
+        });
+      });
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://www.wineenergyva.com",
+        "name": "Wine Energy",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "(703) 368-6568",
+          "contactType": "Customer service"
+        },
+        "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "21:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "10:00",
+              "closes": "23:00"
+            }
+          ]
+      }
+</script>
+
+</body>
+</html>

@@ -67,7 +67,7 @@ gulp.task('minify-js', function() {
 gulp.task('replace-path', function() {
   gulp.src(['index.html','blog.html', 'contact-us.html', 'generators.html',
             'hvac-installation.html', 'hvac-maintenance.html', 'hvac-repair.html',
-            'who-we-are.html'])
+            'who-we-are.html', 'blog-name.html'])
     .pipe(replace(/bootstrap\.min\.css/g, 'all.css'))
     .pipe(replace(/<link href="css\/font-awesome\.min\.css" rel="stylesheet">/g, ''))
     .pipe(replace(/<link href="css\/animate\.min\.css" rel="stylesheet">/g, ''))
