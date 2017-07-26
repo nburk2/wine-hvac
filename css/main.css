@@ -193,7 +193,7 @@ text-align: right;
 	transition: -webkit-transform 1s;
 	-webkit-transform-style: preserve-3d;
 	-webkit-backface-visibility: hidden;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .front {
